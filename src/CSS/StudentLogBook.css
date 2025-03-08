@@ -1,0 +1,102 @@
+/* StudentLogBook.css */
+
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Position first table at the top right */
+.week-table-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Table Styling */
+table {
+  width: 100vh;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border: 2px solid #000; /* Ensuring all borders are visible */
+  color: white;
+}
+
+th, td {
+  border: 2px solid #000; /* Visible border lines */
+  padding: 10px;
+  padding-right: 20px;
+  text-align: left;
+}
+
+/* Styling for the first table */
+.week-table-container table {
+  background-color: transparent; /* No background color */
+  width: auto;
+}
+
+/* Input and Textarea Styling */
+input[type="date"], textarea, input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Button Styling */
+.Back, .Submit {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Back {
+  background-color: #6c757d;
+  color: white;
+  margin-right: 20px;
+}
+
+.Back:hover {
+  background-color: #545b62;
+}
+
+.Submit {
+  background-color: #28a745;
+  color: white;
+}
+
+.Submit:hover {
+  background-color: #218838;
+}
+
+/* Flexbox for Buttons */
+.mt-4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .week-table-container {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  th, td {
+    padding: 8px;
+  }
+
+  input, textarea {
+    font-size: 12px;
+  }
+}
