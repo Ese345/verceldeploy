@@ -112,9 +112,20 @@ header {
 }
 
 /* Main Content */
+.student-notice-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+
+
+
 .container-Student {
     display: flex;
-    flex-direction: column;
+    flex: 1;
     justify-content: center;
     align-items: center;
     height: 30vh;
@@ -150,7 +161,7 @@ header {
     position: relative;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    right: 35rem;
+    margin-right: 2rem;
     margin-top: 15rem;
     color: black;
 
@@ -187,17 +198,34 @@ header {
     width: 100%;
 }
 
-/* Responsive Fix */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* Stacks items */
-        align-items: center;
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .container-Student {
+        padding: 1rem;
     }
     .notice-board {
-        max-width: 100%;
-        margin-bottom: 1rem;
+        width: 100%;
+        font-size: 14px;
     }
-    .content-section {
-        padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    .navbar a {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+    .container-Student {
+        padding: 1rem;
+        width: 95%;
+    }
+    .notice-board {
+        width: 95%;
+        font-size: 14px;
+        margin-top: 1rem;
     }
 }
