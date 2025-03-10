@@ -78,7 +78,7 @@ body {
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
-    top: 310px; /* Slightly below the navbar */
+    top: 360px; /* Slightly below the navbar */
     left: 5px; /* Move it 5px from the left */
 }
 
@@ -106,7 +106,7 @@ body {
     }
 
     .notification {
-        width: 90%;
+        width: 95%;
         font-size: 14px;
     }
 }
@@ -133,10 +133,9 @@ body {
 
     /* Adjust notification box */
     .notification {
-        width: 90%;
+        width: 95%;
         font-size: 14px;
-        margin-top: 85px;
-        left: 5px;
+        margin-top: 20px;
     }
 
     /* Centered Image */
@@ -154,14 +153,14 @@ body {
 
     .container {
         padding: 0.8rem;
+        width: 95%;
     }
 
     .notification {
-        width: 95%;
+        width: 100%;
         font-size: 12px;
         padding: 0.8rem;
-        margin-top: 90px;
-        left: 5px;
+        margin-top: 20px;
     }
 
     /* Slightly smaller image */
