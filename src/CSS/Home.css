@@ -71,14 +71,14 @@ body {
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid #f5c6cb;
-    width: 80%;
+    width: 75%;
     max-width: 600px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
-    top: 260px; /* Slightly below the navbar */
+    top: 290px; /* Slightly below the navbar */
     left: 5px; /* Move it 5px from the left */
 }
 
