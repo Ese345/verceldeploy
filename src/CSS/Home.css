@@ -3,9 +3,9 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url(../assets/CUStudent.jpg);
-    background-size: cover;
+    background-size: 100% 100%; /* Ensure full visibility */
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment:scroll;
     background-position: center;
     min-height: 100vh;
     display: flex;
@@ -13,6 +13,15 @@ body {
     justify-content: center;
     align-items: center;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header */
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.0rem;
+    font-weight: bold;
 }
 
 /* Navbar */
@@ -24,8 +33,8 @@ body {
     padding: 0.8rem;
     list-style: none;
     width: 100%;
-    position: relative;
-    z-index: 100;
+    position: relative; /* Position it below the header */
+    z-index: 100
 }
 
 /* Navbar Links */
@@ -52,6 +61,7 @@ body {
     width: 100%;
     text-align: center;
     padding: 1rem;
+    margin-top: 20px; /* Adjusted to fit new navbar position */
 }
 
 /* Notification Box */
@@ -67,8 +77,26 @@ body {
     text-align: left;
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 3rem;
-    right: 0;
+    position: absolute;
+    top: 260px; /* Slightly below the navbar */
+    left: 5px; /* Move it 5px from the left */
+}
+
+/* Centered Container Image */
+.container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-home img {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Ensures it stays centered */
+    display: block;
 }
 
 /* Responsive Design */
@@ -107,7 +135,14 @@ body {
     .notification {
         width: 90%;
         font-size: 14px;
-        margin-top: 2rem;
+        margin-top: 85px;
+        left: 5px;
+    }
+
+    /* Centered Image */
+    .container-home img {
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -125,5 +160,13 @@ body {
         width: 95%;
         font-size: 12px;
         padding: 0.8rem;
+        margin-top: 90px;
+        left: 5px;
+    }
+
+    /* Slightly smaller image */
+    .container-home img {
+        width: 50px;
+        height: 50px;
     }
 }
