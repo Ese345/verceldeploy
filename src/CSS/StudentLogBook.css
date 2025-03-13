@@ -1,67 +1,73 @@
-/* StudentLogBook.css */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background for contrast */
+}
 
-
+/* Heading */
 h1 {
   text-align: center;
   color: white;
   margin-bottom: 20px;
+  font-size: 2rem;
 }
 
-/* Position first table at the top right */
+/* Table Containers */
 .week-table-container {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end; /* Align to the right */
+  margin-bottom: 20px;
 }
 
 /* Table Styling */
 table {
-  width: 100vh;
+  width: 100%;
+  max-width: 800px; /* Prevents table from stretching too much */
   border-collapse: collapse;
   margin-bottom: 20px;
-  border: 2px solid #000; /* Ensuring all borders are visible */
+  border: 2px solid #000;
   color: white;
+  background-color: transparent;
 }
 
 th, td {
-  border: 2px solid #000; /* Visible border lines */
+  border: 2px solid #000;
   padding: 10px;
-  padding-right: 20px;
   text-align: left;
-}
-
-/* Styling for the first table */
-.week-table-container table {
-  background-color: transparent; /* No background color */
-  width: auto;
+  font-size: 1rem;
 }
 
 /* Input and Textarea Styling */
 input[type="date"], textarea, input[type="file"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 textarea {
   resize: vertical;
+  min-height: 80px;
 }
 
 /* Button Styling */
 .Back, .Submit {
-  padding: 10px 15px;
+  padding: 12px 18px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .Back {
   background-color: #6c757d;
   color: white;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .Back:hover {
@@ -82,21 +88,91 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Wraps on smaller screens */
 }
 
-
 /* Responsive Design */
-@media (max-width: 600px) {
-  .week-table-container {
-    position: relative;
-    margin-bottom: 10px;
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 1.8rem;
   }
-  
+
+  .week-table-container {
+    justify-content: center; /* Center tables on tablets */
+  }
+
+  table {
+    max-width: 100%;
+  }
+
   th, td {
     padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .Back, .Submit {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .week-table-container {
+    justify-content: center;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    font-size: 0.85rem;
+    padding: 6px;
   }
 
   input, textarea {
-    font-size: 12px;
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .mt-4 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Back, .Submit {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .week-table-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+    padding: 5px;
+  }
+
+  input, textarea {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .Back, .Submit {
+    font-size: 0.85rem;
+    width: 100%;
   }
 }
