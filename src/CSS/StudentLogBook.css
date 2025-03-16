@@ -1,73 +1,67 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #121212; /* Dark background for contrast */
-}
+/* StudentLogBook.css */
 
-/* Heading */
+
 h1 {
   text-align: center;
   color: white;
   margin-bottom: 20px;
-  font-size: 2rem;
 }
 
-/* Table Containers */
+/* Position first table at the top right */
 .week-table-container {
-  position: relative;
-  display: flex;
-  justify-content: flex-end; /* Align to the right */
-  margin-bottom: 20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 /* Table Styling */
 table {
-  width: 100%;
-  max-width: 800px; /* Prevents table from stretching too much */
+  width: 100vh;
   border-collapse: collapse;
   margin-bottom: 20px;
-  border: 2px solid #000;
+  border: 2px solid #000; /* Ensuring all borders are visible */
   color: white;
-  background-color: transparent;
 }
 
 th, td {
-  border: 2px solid #000;
+  border: 2px solid #000; /* Visible border lines */
   padding: 10px;
+  padding-right: 20px;
   text-align: left;
-  font-size: 1rem;
+}
+
+/* Styling for the first table */
+.week-table-container table {
+  background-color: transparent; /* No background color */
+  width: auto;
 }
 
 /* Input and Textarea Styling */
 input[type="date"], textarea, input[type="file"] {
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 textarea {
   resize: vertical;
-  min-height: 80px;
 }
 
 /* Button Styling */
 .Back, .Submit {
-  padding: 12px 18px;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 .Back {
   background-color: #6c757d;
   color: white;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .Back:hover {
@@ -88,7 +82,6 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* Wraps on smaller screens */
 }
 
 /* Responsive Design */
