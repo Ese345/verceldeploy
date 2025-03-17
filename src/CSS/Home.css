@@ -16,12 +16,14 @@ body {
 }
 
 .Home-header{
-    position: fixed;
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
-    left: 20%;
-    padding: 15px 20px;
+    justify-content: space-between; /* Space between back button & logo */
     z-index: 100;
 }
 /* Logo Container */
