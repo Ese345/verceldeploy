@@ -17,7 +17,7 @@ const StudentPage = () => {
             <header className="student-page-header" role="banner">
                 <div className="student-logo-container">
                     <img src={CU_LOGO} alt="CU Logo" className="student-logo" />
-                    <h1 className="student-logo-title">COVENANT UNIVERSITY SIWES E-LOGBOOK</h1>
+                    <h1 className="student-logo-title">COVENANT UNIVERSITY E-SIWES PORTAL</h1>
                 </div>
             </header>
             <nav className="student-navbar">

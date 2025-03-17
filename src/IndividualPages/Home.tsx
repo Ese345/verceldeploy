@@ -9,7 +9,7 @@ const Home = () => {
       <header className="Home-header">
         <div className="Home-logo-container">
           <img src={CU_LOGO} alt="CU Logo" className="Home-logo" />
-          <h1>COVENANT UNIVERSITY SIWES E-LOGBOOK</h1>
+          <h1>COVENANT UNIVERSITY E-SIWES PORTAL</h1>
         </div>
         {/* Navigation Bar */}
       </header>
