@@ -1,6 +1,5 @@
 /* StudentLogBook.css */
 
-
 h1 {
   text-align: center;
   color: white;
@@ -16,11 +15,12 @@ h1 {
 
 /* Table Styling */
 table {
-  width: 100vh;
+  width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
   border: 2px solid #000; /* Ensuring all borders are visible */
-  color: white;
+  background-color: white; /* White background */
+  color: black; /* Black text */
 }
 
 th, td {
@@ -32,7 +32,6 @@ th, td {
 
 /* Styling for the first table */
 .week-table-container table {
-  background-color: transparent; /* No background color */
   width: auto;
 }
 
@@ -47,6 +46,7 @@ input[type="date"], textarea, input[type="file"] {
 
 textarea {
   resize: vertical;
+  width: 100%; /* Makes textarea fill its table cell */
 }
 
 /* Button Styling */
@@ -91,11 +91,13 @@ textarea {
   }
 
   .week-table-container {
-    justify-content: center; /* Center tables on tablets */
+    position: static; /* Allow the table to flow naturally */
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   table {
-    max-width: 100%;
+    width: 100%;
   }
 
   th, td {
@@ -105,7 +107,7 @@ textarea {
 
   .Back, .Submit {
     font-size: 0.9rem;
-    padding: 10px 14px;
+    padding: 8px 12px;
   }
 }
 
@@ -115,7 +117,9 @@ textarea {
   }
 
   .week-table-container {
-    justify-content: center;
+    position: static;
+    margin-bottom: 20px;
+    width: 100%;
   }
 
   table {
@@ -131,7 +135,6 @@ textarea {
     font-size: 0.85rem;
     padding: 8px;
   }
-
   .mt-4 {
     flex-direction: column;
     align-items: center;
@@ -150,8 +153,13 @@ textarea {
   }
 
   .week-table-container {
-    flex-direction: column;
-    align-items: center;
+    position: static;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
   }
 
   th, td {

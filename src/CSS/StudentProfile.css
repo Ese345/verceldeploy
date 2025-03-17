@@ -1,0 +1,151 @@
+/* Header Styling */
+.student-profile-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the logo and title */
+  z-index: 1000;
+}
+
+/* Logo Container */
+.profile-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between logo and title */
+}
+
+/* Logo Styling */
+.logo {
+  height: 55px; /* Adjust size */
+  width: auto;
+  border-radius: 50%; /* Make the logo circular */
+}
+
+/* Title Styling */
+.profile-logo-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+
+}
+
+/* Back Button Styling */
+.back-btn {
+  position: absolute; /* Position the button absolutely */
+  top: 80px; /* Adjust the top position */
+  left: 20px; /* Align the button to the left side */
+  background-color: #c20000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.back-btn:hover {
+  background-color: #6f0505;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 1200px; /* Make the container wider */
+  margin-top: 70px; /* Push the container up and reduce spaces between elements */
+  padding: 15px 15px 5px; /* Further reduce padding, especially bottom padding */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 100%;
+}
+
+/* Profile Fields */
+.profile-field {
+  display: flex;
+  align-items: center; /* Align label and field beside each other */
+  margin: 15px 0;
+}
+
+.profile-field label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px; /* Add space between label and field */
+  width: 150px; /* Set a fixed width for labels */
+}
+
+.profile-field p {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #555;
+  flex: 1; /* Allow the field to take up remaining space */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-container {
+    width: 95%;
+  }
+
+  .profile-logo-title {
+    font-size: 1.8rem;
+  }
+
+  .back-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .profile-field label {
+    width: 120px; /* Reduce label width for smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .profile-container {
+    width: 95%;
+  }
+
+  .profile-logo-title {
+    font-size: 1.5rem;
+  }
+
+  .back-btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .profile-field label {
+    width: 100px; /* Further reduce label width */
+  }
+
+  .profile-field p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .profile-logo-title {
+    font-size: 1.2rem;
+  }
+
+  .back-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .profile-field label {
+    width: 80px; /* Adjust label width for very small screens */
+  }
+
+  .profile-field p {
+    font-size: 0.8rem;
+  }
+}

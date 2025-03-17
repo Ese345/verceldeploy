@@ -6,20 +6,21 @@ const Home = () => {
   return (
     <div className="container-home">
       {/* Header Section */}
-      <header className="header">
-        <div className="logo-container">
-          <img src={CU_LOGO} alt="CU Logo" className="logo" />
+      <header className="Home-header">
+        <div className="Home-logo-container">
+          <img src={CU_LOGO} alt="CU Logo" className="Home-logo" />
           <h1>COVENANT UNIVERSITY SIWES E-LOGBOOK</h1>
         </div>
         {/* Navigation Bar */}
-      <nav className="navbar">
+      </header>
+      <nav className="Home-navbar">
         <Link to="/">Home</Link>
         <Link to="/StudentPage">Student </Link>
         <Link to="/SupervisorLogin">University-Based Supervisor</Link>
         <Link to="/IndustrySupervisor">Industry-Based Supervisor</Link>
         <Link to="/AdminLogin">Admin (University SIWES Coordinator)</Link>
       </nav>
-      </header>
+      
 
 
       {/* Notification Area */}

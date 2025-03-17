@@ -3,84 +3,72 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url(../assets/CUStudent.jpg);
-    background-size: cover;
+    background-size: 100% 100%; /* Ensure full visibility */
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
-    height: 100vh;
-}
-
-/* Student Page Container */
-.student-page {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 80px);
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    color: white; /* Ensured font color is white */
-    margin-left: 0.5rem;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-.student-page img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-.student-page h1 {
-    font-size: 2rem; /* Increased font size */
-    margin-bottom: 1rem;
-}
+
 /* Header */
-header {
-    position: absolute;
+.student-page-header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0.8rem 0;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between back button & logo */
     z-index: 100;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Logo Container */
-.logocontainer {
+.student-logo-container {
     display: flex;
+    align-items: center;
+    gap: 5px; /* Reduce space between logo and title */
+    flex: 1;
     justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
 }
 
-.logocontainer h1 {
-    font-size: 2rem; /* Increased font size */
-    color: white; /* Ensured font color is white */
-    margin-left: 0.5rem;
+/* Logo and Title Styling */
+.student-logo {
+    height: 55px; /* Adjust size */
+    width: auto;
+    border-radius: 50%; /* Make the image circular */
 }
 
-/* Navigation Bar */
-.navbar {
+.student-logo-container {
+    font-size: 1rem; /* Make text bigger */
+    font-weight: bold;
+    color: white; /* Change text color to white */
+}
+
+/* Navbar */
+.student-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space elements evenly */
     align-items: center;
+    gap: 20px;
     background-color: rgb(152, 78, 9);
     padding: 0.8rem;
     list-style: none;
-    gap: 1rem;
-    position: relative;
-    width: 100%;
-    top: 1rem;
-    right: 2rem;
-    z-index: 100;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%; /* Full width */
+    position: fixed; /* Stick below the header */
+    top: 100px; /* Adjust to be below the header */
+    left: -20px;
+    z-index: 999; /* Ensure it stays above other elements */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
-.navbar li {
-    display: inline;
-}
-
-.navbar a {
+/* Navbar Links */
+.student-navbar a {
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -89,143 +77,174 @@ header {
     transition: 0.3s;
 }
 
-.navbar a:hover {
+.student-navbar a:hover {
     color: rgb(11, 2, 1);
     border-radius: 5px;
 }
 
-/* Logout Button */
-.logout-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 0.6rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.logout-btn:hover {
-    background-color: darkred;
-}
-
 /* Main Content */
-.student-notice-container {
+.container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 2rem;
-}
-
-
-
-
-.container-Student {
-    display: flex;
-    flex: 1;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
-    text-align: center;
-    margin-top: 1px;
     width: 100%;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px; /* Adjusted to fit new navbar position */
+}
+.logout-btn {
+    background-color: #c20000;
     color: white;
-    padding: 2rem;
-    margin-left: 5rem;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #6f0505;
+  }
+  /* Wrapper for Notice Board and Student Content */
+.student-notice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px; /* Adjust to fit below the header */
+}
+
+/* Main Content Section */
+.container-Student {
+    margin-top: -50px; /* Adjust to fit below the header */
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
 }
 
 .container-Student h1 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    color: white;
+    margin-bottom: 30px;
 }
 
 .container-Student p {
-    font-size: 1.2rem;
-    max-width: 100%;
-    line-height: 1.5;
+    font-size: 1rem;
+    color: white;
 }
-
-/* Notice Board Styling */
+/* Notice Board Section */
 .notice-board {
-    background-color: #f9f9f9;
-    border-left: 5px solid #007bff;
-    padding: 1rem;
+    width: 30%; /* Adjust width for right alignment */
+    max-width: 400px;
+    background-color: #fff;
     border-radius: 8px;
-    border: 1px solid #f5c6cb;
-    width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    position: relative;
-    font-style: italic;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-right: 2rem;
-    margin-top: 15rem;
-    color: black;
-
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    position: absolute; /* Position it absolutely */
+    top: 200px; /* Adjust to fit below the header */
+    right: 20px; /* Align to the right with some spacing */
 }
 
-
-
-/* Style for Notice Items */
 .notice-board h2 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #000;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .notice-board ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.notice-item {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+.notice-board .notice-item {
     font-size: 1rem;
+    color: #555;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.notice-item:last-child {
-    border-bottom: none;
+.notice-board .notice-item:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
 }
 
-/* Main Content */
-.content-section {
-    flex: 2; /* Takes more space */
-    padding-left: 2rem;
-    width: 100%;
+.no-notice {
+    font-size: 1rem;
+    color: #999;
+    text-align: center;
+    margin-top: 10px;
 }
 
-/* Responsive Fixes */
+
+/* Responsive Design */
 @media (max-width: 1024px) {
-    .container-Student {
-        padding: 1rem;
+    .student-navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 0.5rem;
     }
-    .notice-board {
-        width: 100%;
+
+    .student-navbar a {
         font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .container-Student {
+        width: 90%;
+    }
+
+    .notice-board {
+        width: 90%;
     }
 }
 
 @media (max-width: 768px) {
-    .navbar {
+    .student-navbar {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
         padding: 0.5rem;
     }
-    .navbar a {
+
+    .student-navbar a {
         font-size: 14px;
         padding: 0.5rem;
     }
+
     .container-Student {
-        padding: 1rem;
         width: 95%;
     }
+
     .notice-board {
         width: 95%;
-        font-size: 14px;
-        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .student-navbar a {
+        font-size: 12px;
+        padding: 0.3rem;
+    }
+
+    .container-Student {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .notice-board {
+        width: 100%;
+        padding: 15px;
     }
 }

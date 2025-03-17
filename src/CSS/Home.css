@@ -5,7 +5,7 @@ body {
     background-image: url(../assets/CUStudent.jpg);
     background-size: 100% 100%; /* Ensure full visibility */
     background-repeat: no-repeat;
-    background-attachment:scroll;
+    background-attachment: scroll;
     background-position: center;
     min-height: 100vh;
     display: flex;
@@ -15,54 +15,70 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Header */
-.header {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.0rem;
+.Home-header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    left: 20%;
+    padding: 15px 20px;
+    z-index: 100;
+}
+/* Logo Container */
+.Home-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduce space between logo and title */
+    flex: 1;
+    justify-content: center;
+}
+
+/* Logo and Title Styling */
+.Home-logo {
+    height: 55px; /* Adjust size */
+    border-radius: 50%; /* Make the image circular */
+
+}
+
+.Home-logo-title {
+    font-size: 2rem;
     font-weight: bold;
+    color: white;
 }
 
 /* Navbar */
-.navbar {
+.Home-navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space elements evenly */
     align-items: center;
+    gap: 15px;
     background-color: rgb(152, 78, 9);
     padding: 0.8rem;
     list-style: none;
-    width: 100%;
-    position: relative; /* Position it below the header */
-    z-index: 100
+    width: 100%; /* Full width */
+    position: fixed; /* Stick below the header */
+    top: 100px; /* Adjust to be below the header */
+    left: -10px;
+    z-index: 999; /* Ensure it stays above other elements */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
 /* Navbar Links */
-.navbar a {
+.Home-navbar a {
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     transition: 0.3s;
 }
 
-.navbar a:hover {
+.Home-navbar a:hover {
     color: rgb(11, 2, 1);
     border-radius: 5px;
 }
 
 /* Main Content */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 20px; /* Adjusted to fit new navbar position */
-}
 
 /* Notification Box */
 .notification {
@@ -78,94 +94,82 @@ body {
     font-style: italic;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
-    top: 360px; /* Slightly below the navbar */
+    top: 250px; /* Slightly below the navbar */
     left: 5px; /* Move it 5px from the left */
 }
 
 /* Centered Container Image */
 .container-home {
+    margin-bottom: 450px;
+    width: 100vw; /* Full width of the viewport */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.container-home img {
-    width: 70px;
-    height: 70px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Ensures it stays centered */
-    display: block;
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .container {
-        padding: 0.5rem;
+    .Home-logo-title {
+        font-size: 1.5rem;
     }
 
     .notification {
-        width: 95%;
+        width: 90%;
         font-size: 14px;
     }
-}
 
-@media (max-width: 768px) {
-    /* Navbar */
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-        padding: 0.5rem;
-    }
-
-    .navbar a {
-        font-size: 14px;
-        padding: 0.5rem;
-    }
-
-    /* Container Adjustments */
-    .container {
-        height: auto;
-        padding: 1rem;
-    }
-
-    /* Adjust notification box */
-    .notification {
-        width: 95%;
-        font-size: 14px;
-        margin-top: 20px;
-    }
-
-    /* Centered Image */
-    .container-home img {
+    .Home-logo {
         width: 60px;
         height: 60px;
     }
 }
 
+@media (max-width: 768px) {
+    .Home-navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 0.5rem;
+    }
+
+    .Home-navbar a {
+        font-size: 14px;
+        padding: 0.5rem;
+    }
+
+    .Home-logo-title {
+        font-size: 1.2rem;
+    }
+
+    .notification {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    .Home-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 @media (max-width: 480px) {
-    .navbar a {
+    .Home-navbar a {
         font-size: 12px;
         padding: 0.3rem;
     }
 
-    .container {
-        padding: 0.8rem;
-        width: 95%;
+    .Home-logo-title {
+        font-size: 1rem;
     }
 
     .notification {
         width: 100%;
         font-size: 12px;
         padding: 0.8rem;
-        margin-top: 20px;
     }
 
-    /* Slightly smaller image */
-    .container-home img {
-        width: 50px;
-        height: 50px;
+    .Home-logo {
+        width: 40px;
+        height: 40px;
     }
 }
