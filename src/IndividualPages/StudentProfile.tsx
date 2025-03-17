@@ -21,7 +21,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ student }) => {
           <h1 className="profile-logo-title">COVENANT UNIVERSITY SIWES E-LOGBOOK</h1>
         </div>
       </header>
-      <button className="back-btn" onClick={() => window.history.back()}>"Back"</button>
+      <button className="back-btn" onClick={() => window.history.back()}>Back</button>
       <div className="profile-container">
         <h2>Student Profile</h2>
         <div className="profile-field">
