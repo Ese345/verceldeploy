@@ -36,7 +36,7 @@
 /* Back Button Styling */
 .back-btn {
   position: absolute; /* Position the button absolutely */
-  top: 80px; /* Adjust the top position */
+  top: 120px; /* Adjust the top position */
   left: 20px; /* Align the button to the left side */
   background-color: #c20000;
   color: white;
