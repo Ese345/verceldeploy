@@ -5,6 +5,7 @@ import StudentProfile from './IndividualPages/StudentProfile';
 import Login from './LoginPages/Login';
 import './App.css';
 import StudentLogBook from './IndividualPages/StudentLogBook';
+import IndustrySupervisor from './IndividualPages/IndustrySupervisor';
 
 function App() {
   return (
@@ -14,6 +15,11 @@ function App() {
         <Route path="/StudentLogBook" element={<StudentLogBook />} />
         <Route path="/StudentPage" element={<StudentPage />} />
         <Route path="/StudentProfile" element={<StudentProfile student={studentData} />} />
+        <Route path="/IndustrySupervisor" element={<IndustrySupervisor student={{
+          name: '',
+          matric: '',
+          course: ''
+        }} logbookEntries={[]} />} />
         <Route path="/Login" element={<Login />} />
       </Routes>
     </BrowserRouter>

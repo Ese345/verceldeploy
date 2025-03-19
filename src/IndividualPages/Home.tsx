@@ -16,8 +16,8 @@ const Home = () => {
       <nav className="Home-navbar">
         <Link to="/">Home</Link>
         <Link to="/StudentPage">Student </Link>
-        <Link to="/SupervisorLogin">University-Based Supervisor</Link>
         <Link to="/IndustrySupervisor">Industry-Based Supervisor</Link>
+        <Link to="/SupervisorLogin">University-Based Supervisor</Link>
         <Link to="/AdminLogin">Admin (University SIWES Coordinator)</Link>
       </nav>
       

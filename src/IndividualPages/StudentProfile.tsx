@@ -18,7 +18,7 @@ const StudentProfile: React.FC<StudentProfileProps> = ({ student }) => {
       <header className="student-profile-header">
         <div className="profile-logo-container">
           <img src={CU_LOGO} alt="CU Logo" className="logo" />
-          <h1 className="profile-logo-title">COVENANT UNIVERSITY SIWES E-LOGBOOK</h1>
+          <h1 className="profile-logo-title">COVENANT UNIVERSITY E-SIWES PORTAL</h1>
         </div>
       </header>
       <button className="back-btn" onClick={() => window.history.back()}>Back</button>
